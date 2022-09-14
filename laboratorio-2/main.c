@@ -177,15 +177,12 @@ int main(int argc, char *argv[]){
     for (i = 0; i < linhas_C; i++){
         for (j = 0; j < colunas_C; j++){
             soma = 0;
-            //printf("%d, %d, %d\n", i, j, i * colunas_C + j);
-            for (k = 0; k < colunas_A; k++){
-                //printf("A - %d, B - %d\n", i * colunas_A + k, k * colunas_B + j);
+
+            for (k = 0; k < colunas_A; k++)
                 soma += matriz_A[i * colunas_A + k] * matriz_B[k * colunas_B + j];
-            }
-            
+
             matriz_C[i * colunas_C + j] = soma;
-            //printf("%f ", soma);
-        } //printf("\n");
+        }
     }
 
     // terminando o timer
@@ -203,6 +200,7 @@ int main(int argc, char *argv[]){
     elapsed = finish - start;
     printf("\nFinalização: %e segundos!\n", elapsed);
 
+    // liberando a memória
     free(matriz_A);
     free(matriz_B);
     free(matriz_C);
