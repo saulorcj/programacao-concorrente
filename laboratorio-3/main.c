@@ -231,6 +231,13 @@ int main(int argc, char *argv[]){
             exit(-1);
     }
 
+    for(j = 0; j < nthreads; j++){
+        if (pthread_join(tid_sistema[j], NULL)) {
+            printf("--ERRO: pthread_join() \n");
+            exit(-1); 
+        } 
+    }
+
     // terminando o timer
     GET_TIME(finish)
     elapsed = finish - start;
