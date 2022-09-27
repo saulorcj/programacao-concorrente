@@ -6,7 +6,7 @@
 #include <stdlib.h> 
 #include <pthread.h>
 
-#define NTHREADS  2
+#define NTHREADS  4
 
 int soma = 0; //variavel compartilhada entre as threads
 pthread_mutex_t mutex; //variavel de lock para exclusao mutua

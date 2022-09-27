@@ -15,6 +15,6 @@
     3.  Executei inúmeras vezes e em nenhum momento o resultado foi o esperado. Isso pode estar ocorrendo devido ao fato de serem muitas operações de leitura e escrita de memória ocorrendo simultaneamente entre as 2 threads. Isso acaba aumentando muito as chances de haver erros e o resultado quse sempre é incorreto.
     4.  O problema de condição de corrida é ruim e não é tolerável, visto que dificilmente obtemos o resultado correto.
 3.  ### __Tarefa 3__
-    1.  sa
-    2.  sa
-    3.  sa
+    1.  Algoritmo compreendido
+    2.  Em todas as execuções o resultado obtido correspondeu ao esperado
+    3.  Alterei o número de threads para 4 e o resultado continuou seguindo o esperado. No caso 400.000.
