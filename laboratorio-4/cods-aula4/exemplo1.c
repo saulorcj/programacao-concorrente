@@ -46,10 +46,10 @@ int main(int argc, char *argv[]) {
   //cria as 3 threads
   id=3;
   if (pthread_create(&tid[2], NULL, t3, (void *)id)) return 1;
-  id=2;
-  if (pthread_create(&tid[1], NULL, t2, (void *)id)) return 1; 
   id=1;
   if (pthread_create(&tid[0], NULL, t1, (void *)id)) return 1;
+  id=2;
+  if (pthread_create(&tid[1], NULL, t2, (void *)id)) return 1; 
 
   pthread_exit(NULL);
   return 0;
